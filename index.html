@@ -10,24 +10,32 @@
 </head>
 <body class="bg-slate-800 text-white"> 
   <!-- nav -->
-    <nav class="relative container mx-auto p-6">
+    <nav class="relative container mx-auto pt-6 p-6">
       <div class="flex items-center justify-between">
         <!-- logo -->
         <div class="pt-4">
           <img src="./img/hero.jpg" alt="Logo" class="w-1/12 h-1/12 rounded-full cursor-pointer hover:rotate-180 transition">
         </div>
         <!-- links -->
-        <div class="hidden space-x-6 shadow-sm ml-4 md:flex">
+        <div class="hidden space-x-6 ml-4 md:flex">
           <a href="index.html" class="hover:text-yellow-100 font-medium pt-3">Home</a>
           <a href="#about" class="hover:text-yellow-100 font-medium pt-3">About</a>
           <a href="#contact" class="hover:text-yellow-100 font-medium pt-3">Contact</a>
           <!-- button -->
-          <img src="./assets/bars.svg" class="h-8 my-2 cursor-pointer " alt="">
-          <img src="./assets/times.svg" class="h-8 my-2 cursor-pointer hidden" alt="">
-
+          <!-- <img src="./assets/bars.svg" class="h-8 my-2 cursor-pointer " alt=""> -->
+          <!-- <img src="./assets/times.svg" class="h-8 my-2 cursor-pointer hidden" alt=""> -->
           
-        </div>
-        
+        </div> 
+        <button id="menu-btn" class="block hamburger md:hidden focus:outline-none font-semibold">
+          <span class="hamburger-1"></span>
+          <span class="hamburger-2"></span>
+          <span class="hamburger-3"></span>
+        </button>
+      </div>
+      <div id="menu" class="hidden flex-col  items-center space-y-3 text-white">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#ontact">Contact</a>
       </div>
     </nav>
 
@@ -101,7 +109,7 @@
                 
                 <span class="cursor-pointer">
                   <i class="uil uil-whatsapp text-3xl text-center"></i>
-                  <p class="text-center">Whatsapp</p>
+                  <p class="text-center">App</p>
                 </span>
               </a>   
               
@@ -120,9 +128,10 @@
           class="flex justify-center flex-col space-y-10 md:w-1/2">
           <h2 class="max-w-md  text-center text-3xl  md:text-left md:text-5xl">Newsletter</h2>
           <p class="max-w-sm text-2xl text-center text-yellow-200 md:text-left sm:text-center">
-            Have any query?  Subscribe To My Newsletter
+            Subscribe To My Newsletter
+            
           </p>
-
+          <small class="text-white text-center  md:text-left sm:text-center">*No Spam</small>
           <div class="flex justify-center md:justify-start md:w-1/2">
             <div class="bg-slate-950 w-full p-10 flex justify-center items-center flex-col my-2 rounded-sm">
               <form onsubmit="sendEmail(); reset(); return false">
@@ -173,21 +182,7 @@
       </div>
     </footer>
 
-    <script src="https://smtpjs.com/v3/smtp.js">
-      function sendEmail() {
-        Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "simonwangui0038@gmail.com",
-            Password : "",
-            To : 'simonwangui0038@gmail.com',
-            From : document.getElementsByName("email").value,
-            Subject : "Enquiry From Portfolio",
-            Body : "And this is the body"
-        }).then(
-        message => alert(message)
-        );
-        
-      }
+    <script src="./js/script.js">
     </script>
 </body>
 </html>

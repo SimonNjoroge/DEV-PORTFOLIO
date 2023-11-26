@@ -605,6 +605,10 @@ video {
   margin-top: 2rem;
 }
 
+.block{
+  display: block;
+}
+
 .flex{
   display: flex;
 }
@@ -778,6 +782,10 @@ video {
   padding-top: 1rem;
 }
 
+.pt-6{
+  padding-top: 1.5rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -800,6 +808,10 @@ video {
   font-weight: 500;
 }
 
+.font-semibold{
+  font-weight: 600;
+}
+
 .text-black{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -818,12 +830,6 @@ video {
 .text-yellow-400{
   --tw-text-opacity: 1;
   color: rgb(250 204 21 / var(--tw-text-opacity));
-}
-
-.shadow-sm{
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .outline-none{
@@ -866,6 +872,73 @@ span
   background-color: #ffa420;
 }
 
+#menu-btn
+{
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+}
+
+#menu-btn:focus
+{
+  outline: none;
+}
+
+.hamburger
+{
+  transition: all 0.25s;
+}
+
+.hamburger-1,
+.hamburger-2,
+.hamburger-3
+{
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  width: 24px;
+  height: 2px;
+  transform: rotate(0);
+  transition: 0.5s;
+}
+
+.hamburger-1
+{
+  transform: translateY(6px);
+}
+
+.hamburger-2
+{
+  transform: translateY(12px);
+}
+
+.open .hamburger-1
+{
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-2
+{
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+.open .hamburger-3
+{
+  display: none;
+  transition: 0.5s;
+}
+
+#menu
+{
+  background-color: #213657;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  transition: ease-in 2s;
+}
+
 .hover\:rotate-180:hover{
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -886,9 +959,24 @@ span
   color: rgb(254 252 232 / var(--tw-text-opacity));
 }
 
+.focus\:outline-none:focus{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 640px){
+  .sm\:text-center{
+    text-align: center;
+  }
+}
+
 @media (min-width: 768px){
   .md\:flex{
     display: flex;
+  }
+
+  .md\:hidden{
+    display: none;
   }
 
   .md\:w-1\/2{

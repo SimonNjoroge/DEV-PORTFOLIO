@@ -9,6 +9,7 @@
 *
 {
    font-family: 'Poppins', sans-serif;
+
 }
 html
 {
@@ -18,6 +19,7 @@ span
 {
    font-family: Style Script;
 }
+
 ::-webkit-scrollbar
 {  
    width: 6px;
@@ -27,4 +29,65 @@ span
 {
    border-radius: 10px;
    background-color: #ffa420;
+}
+#menu-btn
+{
+   width: 24px;
+   height: 24px;
+   cursor: pointer;
+   position: relative;
+   
+}
+#menu-btn:focus
+{
+   outline: none;
+
+}
+.hamburger
+{
+   transition: all 0.25s;
+}
+.hamburger-1,
+.hamburger-2,
+.hamburger-3
+{
+   position: absolute;
+   left: 0;
+   right: 0;
+   background-color: #fff;
+   width: 24px;
+   height: 2px;
+   transform: rotate(0);
+   transition: 0.5s;
+}
+.hamburger-1
+{
+   transform: translateY(6px);
+}
+.hamburger-2
+{
+   transform: translateY(12px);
+}
+.open .hamburger-1
+{
+   transform: rotate(45deg) translateY(6px) translate(6px);
+
+}
+.open .hamburger-2
+{
+   transform: rotate(-45deg) translateY(6px) translate(-6px);
+
+}
+.open .hamburger-3
+{
+   display: none;
+   transition: 0.5s;
+}
+#menu
+{
+   background-color: #213657;
+   border-radius: 5px;
+   padding: 10px;
+   margin-top: 10px;
+   transition: ease-in 2s;
 }
