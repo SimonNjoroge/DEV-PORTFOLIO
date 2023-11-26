@@ -73,12 +73,12 @@ span
    transform: rotate(45deg) translateY(6px) translate(6px);
 
 }
-.open .hamburger-2
+.open .hamburger-3
 {
    transform: rotate(-45deg) translateY(6px) translate(-6px);
 
 }
-.open .hamburger-3
+.open .hamburger-2
 {
    display: none;
    transition: 0.5s;
