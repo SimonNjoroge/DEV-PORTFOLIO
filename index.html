@@ -124,9 +124,12 @@
 
           <div class="flex justify-center md:justify-start md:w-1/2">
             <div class="bg-slate-950 w-full p-10 flex justify-center items-center flex-col my-2 rounded-sm">
-              <input class="py-4 my-6 w-full rounded-md bg-slate-900 text-white outline-none text-center font-medium" type="text" placeholder="Name" required>
-              <input class="py-4 my-6 w-full rounded-md bg-slate-900 text-white outline-none text-center font-medium" type="email" placeholder="Email" required>
+              <form onsubmit="sendEmail(); reset(); return false">
+              <input class="py-4 my-6 w-full rounded-md bg-slate-900 text-white outline-none text-center font-medium" type="text" placeholder="Name"  name="Username" required>
+              <input class="py-4 my-6 w-full rounded-md bg-slate-900 text-white outline-none text-center font-medium" type="email" placeholder="Email" name="email" required>
+              <input class="py-4 my-6 w-full rounded-md bg-slate-900 text-white outline-none text-center font-medium" type="text" placeholder="message"  name="message" required>
               <button class="py-4 my-6 w-full rounded-md bg-yellow-200 text-black font-bold" type="submit">Subscribe</button>
+            </form>
             </div>
           </div>
         </div>
@@ -170,8 +173,21 @@
       </div>
     </footer>
 
-    <script async>
-
+    <script src="https://smtpjs.com/v3/smtp.js">
+      function sendEmail() {
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "simonwangui0038@gmail.com",
+            Password : "",
+            To : 'simonwangui0038@gmail.com',
+            From : document.getElementsByName("email").value,
+            Subject : "Enquiry From Portfolio",
+            Body : "And this is the body"
+        }).then(
+        message => alert(message)
+        );
+        
+      }
     </script>
 </body>
 </html>
