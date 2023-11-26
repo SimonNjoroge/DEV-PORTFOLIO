@@ -93,11 +93,27 @@ span
    display: none;
    transition: 0.5s;
 }
-#menu
-{
-   background-color: #213657;
-   border-radius: 5px;
-   padding: 10px;
-   margin-top: 10px;
-   transition: ease-in 2s;
-}
+
+
+#menu {
+   position: fixed;
+   top: 0;
+   padding-top: 7rem;
+   right: -250px; 
+   width: 250px; 
+   height: 100%;
+   border-radius: 10px;
+   background-color: #33435cc7; 
+   transition: left 0.3s ease; 
+ }
+ 
+ #menu.flex {
+   right: 0;
+ }
+ 
+
+ #menu-btn {
+   position: fixed;
+   right: 20px;
+   z-index: 2; 
+ }
