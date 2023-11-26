@@ -57,17 +57,23 @@ span
    background-color: #fff;
    width: 24px;
    height: 2px;
+   border-radius: .2px;
    transform: rotate(0);
    transition: 0.5s;
 }
 .hamburger-1
 {
-   transform: translateY(6px);
+   transform: translateY(-6px);
 }
-.hamburger-2
+.hamburger-3
 {
    transform: translateY(12px);
 }
+.hamburger-2
+{
+   transform: translateY(3px);
+}
+
 .open .hamburger-1
 {
    transform: rotate(45deg) translateY(6px) translate(6px);
