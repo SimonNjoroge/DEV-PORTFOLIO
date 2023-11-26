@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,100&family=Style+Script&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+
 *
 {
-   font-family: 'abel','Arial Narrow', Arial, sans-serif;
+   font-family: 'Poppins', sans-serif;
 }
 html
 {
@@ -12,7 +16,7 @@ html
 }
 span
 {
-   font-family: satisfy;
+   font-family: Style Script;
 }
 ::-webkit-scrollbar
 {  
