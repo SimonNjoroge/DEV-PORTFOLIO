@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*
+{
+   font-family: 'abel','Arial Narrow', Arial, sans-serif;
+}
+html
+{
+   scroll-behavior: smooth;
+}
+span
+{
+   font-family: satisfy;
+}
+::-webkit-scrollbar
+{  
+   width: 6px;
+   background-color: rgb(30, 41, 59);
+}
+::-webkit-scrollbar-thumb
+{
+   border-radius: 10px;
+   background-color: #ffa420;
+}
