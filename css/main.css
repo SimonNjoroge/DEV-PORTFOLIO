@@ -855,6 +855,13 @@ html
   scroll-behavior: smooth;
 }
 
+img
+{
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 span
 {
   font-family: Style Script;
